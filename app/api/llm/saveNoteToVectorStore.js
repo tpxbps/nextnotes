@@ -30,7 +30,7 @@ export const saveNoteToVectorStore = async (noteInfo) => {
   const splitDocs = await splitter.splitDocuments(docs)
 
   const embeddings = new OllamaEmbeddings({
-    model: "gemma2",
+    model: "nomic-embed-text",
     baseUrl: "http://localhost:11434"
   })
   const vectorStore = await FaissStore.fromDocuments(splitDocs, embeddings)

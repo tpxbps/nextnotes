@@ -18,7 +18,7 @@ import redis from "@/lib/redis"
 
 async function loadVectorStore() {
   const embeddings = new OllamaEmbeddings({
-    model: "gemma2",
+    model: "nomic-embed-text",
     baseUrl: "http://localhost:11434"
   })
   const rootDirPath = join(process.cwd(), 'public', 'db')
